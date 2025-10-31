@@ -1,13 +1,9 @@
-version: "3.8"
-
 services:
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: testenvq-frontend
+  angular-frontend:
+    image: sanchaljustgrow/angular-dockertest-frontend:latest
+    container_name: angular-frontend
     ports:
-      - "8080:80"
+      - "${APP_PORT:-8080}:80"
     env_file:
-      - .env   # loads your .env file and makes it available to the container
+      - .env
     restart: always
