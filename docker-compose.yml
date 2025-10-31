@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   angular-frontend:
-    image: sanchaljustgrow/new-test-frontend:latest
+    image: sanchaljustgrow/docker-testNew-frontend:latest
     container_name: angular-frontend
     environment:
       - NG_APP_URL=${NG_APP_URL}
