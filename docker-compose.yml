@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   angular-frontend:
-    image: sanchaljustgrow/dockertest-frontend:latest
+    image: sanchaljustgrow/new-test-frontend:lates
     container_name: angular-frontend
     environment:
       - ENV NG_APP_URL="https://dummyjson.com/products/1"
