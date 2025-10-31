@@ -6,7 +6,6 @@ services:
     container_name: angular-frontend
     ports:
       - "8080:80"
-    env_file:
-      - .env
+  
     environment:
       - NG_APP_URL=https://dummyjson.com/auth/login
