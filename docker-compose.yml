@@ -8,3 +8,4 @@ services:
       - NG_APP_URL=https://dummyjson.com/auth/login
     ports:
       - "8080:80"
+   command: /bin/sh -c "envsubst < /usr/share/nginx/html/runtime-env.js > /usr/share/nginx/html/assets/runtime-env.js && exec nginx -g 'daemon off;'"
