@@ -5,6 +5,6 @@ services:
     image: sanchaljustgrow/new-test-frontend:latest
     container_name: angular-frontend
     environment:
-      - ENV NG_APP_URL="https://dummyjson.com/products/1"
+      - ENV NG_APP_URL="https://dummyjson.com/products/3"
     ports:
       - "8080:80"
