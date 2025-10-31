@@ -4,8 +4,5 @@ services:
     container_name: angular-frontend
     ports:
       - "8080:80"
-    environment:
-      - NG_APP_URL
-    volumes:
-      - ./env.template.js:/usr/share/nginx/html/env.template.js
-      - ./entrypoint.sh:/docker-entrypoint.d/99-env-inject.sh
+    env_file:
+      - .env
