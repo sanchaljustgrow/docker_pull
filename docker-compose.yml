@@ -1,11 +1,11 @@
-version: '3.9'
-
 services:
   angular-frontend:
     image: sanchaljustgrow/angular-dockertest-frontend:latest
     container_name: angular-frontend
     ports:
       - "8080:80"
-  
     environment:
-      - NG_APP_URL=https://dummyjson.com/auth/login
+      - NG_APP_URL
+    volumes:
+      - ./env.template.js:/usr/share/nginx/html/env.template.js
+      - ./entrypoint.sh:/docker-entrypoint.d/99-env-inject.sh
