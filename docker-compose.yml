@@ -2,9 +2,11 @@ version: "3.8"
 
 services:
   angular-frontend:
-    image: sanchaljustgrow/docker-testNew-frontend:latest
+    build:
+      context: https://github.com/your-org/frontend-repo.git
+      dockerfile: Dockerfile
+      args:
+        NG_APP_URL: ${NG_APP_URL}
     container_name: angular-frontend
-    environment:
-      - NG_APP_URL=${NG_APP_URL}
     ports:
       - "8081:80"
