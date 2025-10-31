@@ -2,8 +2,7 @@ services:
   angular-frontend:
     image: sanchaljustgrow/dockertest-frontend:latest
     container_name: angular-frontend
-    args:
+    environment:
       - NG_APP_URL=https://dummyjson.com/auth/login
     ports:
       - "8080:80"
-   
