@@ -1,12 +1,8 @@
-version: "3.8"
-
 services:
   angular-frontend:
     image: sanchaljustgrow/docker-testnew-frontend:latest
     container_name: angular-frontend
     environment:
-      - NG_APP_URL=https://dummyjson.com/products/2
+      NG_APP_URL: "https://dummyjson.com/products/2"
     ports:
       - "8081:80"
-    command: >
-      sh -c "sed -i 's|DEFAULT_URL|'$NG_APP_URL'|g' /usr/share/nginx/html/assets/env.js && nginx -g 'daemon off;'"
